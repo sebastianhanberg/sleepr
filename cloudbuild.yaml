@@ -1,64 +1,65 @@
 steps:
-# Reservations
+  # Reservations
   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'build',
-      '-t', 
-      'europe-west3-docker.pkg.dev/sleepr-427608/reservations/production',
-      '-f',
-      'apps/reservations/Dockerfile',
-      '.'
-    ]
-   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'push', 
-      'europe-west3-docker.pkg.dev/sleepr-427608/reservations/production',
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west3-docker.pkg.dev/sleepr-427608/reservations/production',
+        '-f',
+        'apps/reservations/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'europe-west3-docker.pkg.dev/sleepr-427608/reservations/production',
+      ]
 
-# Auth
+  # Auth
   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'build',
-      '-t', 
-      'europe-west3-docker.pkg.dev/sleepr-427608/auth/production',
-      '-f',
-      'apps/auth/Dockerfile',
-      '.'
-    ]
-   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'push', 
-      'europe-west3-docker.pkg.dev/sleepr-427608/auth/production',
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west3-docker.pkg.dev/sleepr-427608/auth/production',
+        '-f',
+        'apps/auth/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'europe-west3-docker.pkg.dev/sleepr-427608/auth/production']
 
-# Notifications
+  # Notifications
   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'build',
-      '-t', 
-      'europe-west3-docker.pkg.dev/sleepr-427608/notifications/production',
-      '-f',
-      'apps/notifications/Dockerfile',
-      '.'
-    ]
-   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'push', 
-      'europe-west3-docker.pkg.dev/sleepr-427608/notifications/production',
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west3-docker.pkg.dev/sleepr-427608/notifications/production',
+        '-f',
+        'apps/notifications/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'europe-west3-docker.pkg.dev/sleepr-427608/notifications/production',
+      ]
 
-# Payments
+  # Payments
   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'build',
-      '-t', 
-      'europe-west3-docker.pkg.dev/sleepr-427608/payments/production',
-      '-f',
-      'apps/payments/Dockerfile',
-      '.'
-    ]
-   - name: 'gcr.io/cloud-builders/docker'
-    args: [
-      'push', 
-      'europe-west3-docker.pkg.dev/sleepr-427608/payments/production',
-    ]
+    args:
+      [
+        'build',
+        '-t',
+        'europe-west3-docker.pkg.dev/sleepr-427608/payments/production',
+        '-f',
+        'apps/payments/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      ['push', 'europe-west3-docker.pkg.dev/sleepr-427608/payments/production']
