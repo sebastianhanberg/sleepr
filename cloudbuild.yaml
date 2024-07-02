@@ -63,3 +63,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       ['push', 'europe-west3-docker.pkg.dev/sleepr-427608/payments/production']
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+serviceAccount: 180724403193@cloudbuild.gserviceaccount.com
