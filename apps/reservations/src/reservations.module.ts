@@ -4,6 +4,7 @@ import { ReservationsController } from './reservations.controller';
 import {
   AUTH_SERVICE,
   DatabaseModule,
+  HealthModule,
   LoggerModule,
   PAYMENTS_SERVICE,
 } from '@app/common';
@@ -58,6 +59,7 @@ import * as Joi from 'joi';
         inject: [ConfigService],
       },
     ]),
+    HealthModule,
   ],
   controllers: [ReservationsController],
   providers: [ReservationsService, ReservationsRepositary],

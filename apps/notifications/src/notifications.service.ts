@@ -13,7 +13,7 @@ export class NotificationsService {
       type: 'OAuth2',
       user: this.configService.get('SMTP_USER'),
       clientId: this.configService.get('GOOGLE_OATH_CLIENT_ID'),
-      clientSecret: this.configService.get('GOOGLE_OATH_CKIENT_SECRET'),
+      clientSecret: this.configService.get('GOOGLE_OATH_CLIENT_SECRET'),
       refreshToken: this.configService.get('GOOGLE_OATH_REFRESH_TOKEN'),
     },
   });
